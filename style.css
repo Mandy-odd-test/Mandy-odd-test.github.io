@@ -1,0 +1,18 @@
+body{
+    background-color: black;
+   align-items: center;
+   justify-content: center;
+}
+#Hours{
+color: red;
+font-size: 40vh;
+text-align: center;
+margin-right: 5vh;
+}
+#Minutes{
+    color: green;
+    font-size: 40vh;
+}
+#divide {
+    font-size: 40vh;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body >
+    <marquee scrollamount="30">
+      <b id="Hours"></b>
+
+      <b id="Minutes"></b>
+    </marquee>
+  
+    
+    <script>
+      const mins = document.getElementById("Minutes");
+      const hours = document.getElementById("Hours");
+
+      const test = document.getElementById("test");
+      var clockData = {};
+      fetch("./data.json")
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return res.json();
+        })
+        .then((data) => {
+          // console.log("Data ",data)
+          clockData = data;
+        });
+      async function updateTime() {
+        const now = new Date();
+        const Hours = now.getHours();
+        const Minutes1 = now.getMinutes();
+        if (Hours > 11) {
+          Hours1 = Hours - 12;
+        } else {
+          Hours1 = Hours;
+        }
+        var num = (await Minutes1) + Hours1 * 60 + 1;
+        if (num==721) {
+          num=1;
+        }
+        var pData = clockData[num.toString()];
+        hours.textContent = clockData[num.toString()]["h1"] ;
+        mins.textContent= clockData[num.toString()]["m1"]
+        
+      }
+
+      updateTime();
+      setInterval(updateTime, 1000);
+    </script>
+  
+  </body>
+</html>
