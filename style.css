@@ -5,14 +5,14 @@ body{
 }
 #Hours{
 color: red;
-font-size: 40vh;
+font-size: 60vh;
 text-align: center;
 margin-right: 5vh;
 }
 #Minutes{
     color: green;
-    font-size: 40vh;
+    font-size: 60vh;
 }
 #divide {
-    font-size: 40vh;
+    font-size: 60vh;
 }
