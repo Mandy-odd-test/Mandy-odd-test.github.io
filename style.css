@@ -1,18 +1,15 @@
 body{
     background-color: black;
    align-items: center;
-   justify-content: center;
+   justify-content: center
 }
 #Hours{
 color: red;
 font-size: 60vh;
 text-align: center;
-margin-right: 5vh;
+margin-right: 250px
 }
 #Minutes{
     color: green;
-    font-size: 60vh;
-}
-#divide {
-    font-size: 60vh;
+    font-size: 60vh
 }
